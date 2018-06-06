@@ -1,10 +1,81 @@
 @import "../../node_modules/bootstrap/scss/bootstrap";
 
 body {
-  margin: 3rem;
+  width: 100wh;
+  height: 90vh;
+  color: #fff;
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  -webkit-animation: Gradient 15s ease infinite;
+  -moz-animation: Gradient 15s ease infinite;
+  animation: Gradient 15s ease infinite;
+  margin: 5rem;
+}
+
+@-webkit-keyframes Gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@-moz-keyframes Gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes Gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 .header {
-  margin: 1rem;
+  margin: 100rem;
 }
 
+.jeff {
+  box-shadow: 3px 1px 20px 4px black;
+  width: 25%;
+  justify-content: center;
+  margin: 25px;
+  background-color: whitesmoke;
+  text-decoration-color: #23a6d5;
+  border-radius: 2%;
+
+  p {
+    color: black;
+    padding: 5px;
+  }
+}
+
+.btn {
+  margin-left: 0.5rem;
+}
+
+.test {
+  margin: 0.5rem;
+  box-shadow: 2px 1px 10px 2px black;
+}
+
+.color {
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}

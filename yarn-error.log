@@ -1,8 +1,8 @@
 Arguments: 
-  /home/bjarne/.nvm/versions/node/v8.9.4/bin/node /usr/share/yarn/bin/yarn.js start
+  /home/bjarne/.nvm/versions/node/v8.9.4/bin/node /home/bjarne/.nvm/versions/node/v8.9.4/lib/node_modules/yarn/bin/yarn.js run start-js
 
 PATH: 
-  /home/bjarne/.nvm/versions/node/v8.9.4/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+  /home/bjarne/Development/react-weater/node_modules/.bin:/home/bjarne/.config/yarn/link/node_modules/.bin:/home/bjarne/Development/react-weater/node_modules/.bin:/home/bjarne/.config/yarn/link/node_modules/.bin:/home/bjarne/.yarn/bin:/home/bjarne/.nvm/versions/node/v8.9.4/libexec/lib/node_modules/npm/bin/node-gyp-bin:/home/bjarne/.nvm/versions/node/v8.9.4/lib/node_modules/npm/bin/node-gyp-bin:/home/bjarne/.nvm/versions/node/v8.9.4/bin/node_modules/npm/bin/node-gyp-bin:/home/bjarne/.nvm/versions/node/v8.9.4/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
 
 Yarn version: 
   1.5.1
@@ -19,9 +19,8 @@ npm manifest:
     "version": "0.0.1",
     "private": true,
     "scripts": {
-      "build-css": "node-sass-chokidar src/sass/ -o src/css/",
-      "watch-css":
-        "npm run build-css && node-sass-chokidar src/sass/ -o src/css/ --watch --recursive",
+      "build-css": "node-sass-chokidar src/sass/ -o public/css/",
+      "watch-css": "npm run build-css && node-sass-chokidar src/sass/ -o public/css/ --watch --recursive",
       "start-js": "react-scripts start",
       "start": "npm-run-all -p watch-css start-js",
       "build-js": "react-scripts build",
@@ -29,9 +28,9 @@ npm manifest:
       "eject": "react-scripts eject"
     },
     "dependencies": {
-      "bootstrap": "^4.0.0",
-      "node-sass-chokidar": "^1.2.2",
-      "npm-run-all": "^4.1.2",
+      "bootstrap": "^4.1.1",
+      "node-sass-chokidar": "^1.3.0",
+      "npm-run-all": "^4.1.3",
       "react": "^16.3.1",
       "react-dom": "^16.3.1",
       "react-router-dom": "^4.2.2",
@@ -1144,9 +1143,9 @@ Lockfile:
     dependencies:
       hoek "4.x.x"
   
-  bootstrap@^4.0.0:
-    version "4.0.0"
-    resolved "https://registry.yarnpkg.com/bootstrap/-/bootstrap-4.0.0.tgz#ceb03842c145fcc1b9b4e15da2a05656ba68469a"
+  bootstrap@^4.1.1:
+    version "4.1.1"
+    resolved "https://registry.yarnpkg.com/bootstrap/-/bootstrap-4.1.1.tgz#3aec85000fa619085da8d2e4983dfd67cf2114cb"
   
   boxen@^1.2.1:
     version "1.3.0"
@@ -1774,6 +1773,16 @@ Lockfile:
     resolved "https://registry.yarnpkg.com/cross-spawn/-/cross-spawn-3.0.1.tgz#1256037ecb9f0c5f79e3d6ef135e30770184b982"
     dependencies:
       lru-cache "^4.0.1"
+      which "^1.2.9"
+  
+  cross-spawn@^6.0.4:
+    version "6.0.5"
+    resolved "https://registry.yarnpkg.com/cross-spawn/-/cross-spawn-6.0.5.tgz#4a5ec7c64dfae22c3a14124dbacdee846d80cbc4"
+    dependencies:
+      nice-try "^1.0.4"
+      path-key "^2.0.1"
+      semver "^5.5.0"
+      shebang-command "^1.2.0"
       which "^1.2.9"
   
   cryptiles@2.x.x:
@@ -4791,6 +4800,10 @@ Lockfile:
     version "1.0.0"
     resolved "https://registry.yarnpkg.com/next-tick/-/next-tick-1.0.0.tgz#ca86d1fe8828169b0120208e3dc8424b9db8342c"
   
+  nice-try@^1.0.4:
+    version "1.0.4"
+    resolved "https://registry.yarnpkg.com/nice-try/-/nice-try-1.0.4.tgz#d93962f6c52f2c1558c0fbda6d512819f1efe1c4"
+  
   no-case@^2.2.0:
     version "2.3.2"
     resolved "https://registry.yarnpkg.com/no-case/-/no-case-2.3.2.tgz#60b813396be39b3f1288a4c1ed5d1e7d28b464ac"
@@ -4883,9 +4896,9 @@ Lockfile:
       tar "^2.2.1"
       tar-pack "^3.4.0"
   
-  node-sass-chokidar@^1.2.2:
-    version "1.2.2"
-    resolved "https://registry.yarnpkg.com/node-sass-chokidar/-/node-sass-chokidar-1.2.2.tgz#ea1c13634c74f9cb411eb7a8a7906ded95cb28fe"
+  node-sass-chokidar@^1.3.0:
+    version "1.3.0"
+    resolved "https://registry.yarnpkg.com/node-sass-chokidar/-/node-sass-chokidar-1.3.0.tgz#3839698dd1de23b491bb674417b5e6fffaf25270"
     dependencies:
       async-foreach "^0.1.3"
       chokidar "^1.6.1"
@@ -4961,13 +4974,13 @@ Lockfile:
       query-string "^4.1.0"
       sort-keys "^1.0.0"
   
-  npm-run-all@^4.1.2:
-    version "4.1.2"
-    resolved "https://registry.yarnpkg.com/npm-run-all/-/npm-run-all-4.1.2.tgz#90d62d078792d20669139e718621186656cea056"
+  npm-run-all@^4.1.3:
+    version "4.1.3"
+    resolved "https://registry.yarnpkg.com/npm-run-all/-/npm-run-all-4.1.3.tgz#49f15b55a66bb4101664ce270cb18e7103f8f185"
     dependencies:
       ansi-styles "^3.2.0"
       chalk "^2.1.0"
-      cross-spawn "^5.1.0"
+      cross-spawn "^6.0.4"
       memorystream "^0.3.1"
       minimatch "^3.0.4"
       ps-tree "^1.1.0"
@@ -5263,7 +5276,7 @@ Lockfile:
     version "1.0.2"
     resolved "https://registry.yarnpkg.com/path-is-inside/-/path-is-inside-1.0.2.tgz#365417dede44430d1c11af61027facf074bdfc53"
   
-  path-key@^2.0.0:
+  path-key@^2.0.0, path-key@^2.0.1:
     version "2.0.1"
     resolved "https://registry.yarnpkg.com/path-key/-/path-key-2.0.1.tgz#411cadb574c5a140d3a4b1910d40d80cc9f40b40"
   
@@ -6420,7 +6433,7 @@ Lockfile:
     dependencies:
       semver "^5.0.3"
   
-  "semver@2 || 3 || 4 || 5", semver@^5.0.3, semver@^5.1.0, semver@^5.3.0, semver@^5.4.1:
+  "semver@2 || 3 || 4 || 5", semver@^5.0.3, semver@^5.1.0, semver@^5.3.0, semver@^5.4.1, semver@^5.5.0:
     version "5.5.0"
     resolved "https://registry.yarnpkg.com/semver/-/semver-5.5.0.tgz#dc4bbc7a6ca9d916dee5d43516f0092b58f7b8ab"
   
@@ -7674,15 +7687,15 @@ Lockfile:
 
 Trace: 
   Error: Command failed.
-  Exit code: 1
+  Exit signal: SIGINT
   Command: sh
-  Arguments: -c npm-run-all -p watch-css start-js
-  Directory: /home/bjarne/Development/react-todo
+  Arguments: -c react-scripts start
+  Directory: /home/bjarne/Development/react-weater
   Output:
   
-      at ProcessTermError.MessageError (/usr/share/yarn/lib/cli.js:186:110)
-      at new ProcessTermError (/usr/share/yarn/lib/cli.js:226:113)
-      at ChildProcess.<anonymous> (/usr/share/yarn/lib/cli.js:30281:17)
+      at ProcessTermError.MessageError (/home/bjarne/.nvm/versions/node/v8.9.4/lib/node_modules/yarn/lib/cli.js:186:110)
+      at new ProcessTermError (/home/bjarne/.nvm/versions/node/v8.9.4/lib/node_modules/yarn/lib/cli.js:226:113)
+      at ChildProcess.<anonymous> (/home/bjarne/.nvm/versions/node/v8.9.4/lib/node_modules/yarn/lib/cli.js:30281:17)
       at emitTwo (events.js:126:13)
       at ChildProcess.emit (events.js:214:7)
       at maybeClose (internal/child_process.js:925:16)

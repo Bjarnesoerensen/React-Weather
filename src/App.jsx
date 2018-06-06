@@ -41,25 +41,40 @@ class App extends React.Component {
         country: undefined,
         humidity: undefined,
         description: undefined,
-        error: "Please enter the value you idiot!"
+        error: "Please enter the value!"
       });
     }
   };
 
   render() {
-    return (
-      <div>
-        <Titles />
-        <Form getWeather={this.getWeather} />
-        <Weather
-          temperature={this.state.temperature}
-          city={this.state.city}
-          country={this.state.country}
-          humidity={this.state.humidity}
-          description={this.state.description}
-          error={this.state.error}
-        />
-      </div>
+    return ( < div >
+      <
+      Titles / >
+      <
+      Form getWeather = {
+        this.getWeather
+      }
+      /> <
+      Weather temperature = {
+        this.state.temperature
+      }
+      city = {
+        this.state.city
+      }
+      country = {
+        this.state.country
+      }
+      humidity = {
+        this.state.humidity
+      }
+      description = {
+        this.state.description
+      }
+      error = {
+        this.state.error
+      }
+      /> </
+      div >
     );
   }
 }
