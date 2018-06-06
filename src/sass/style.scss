@@ -74,8 +74,16 @@ body {
 .test {
   margin: 0.5rem;
   box-shadow: 2px 1px 10px 2px black;
+  padding: 3px;
 }
 
 .color {
   text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  .jeff {
+    width: 80%;
+  }
 }
