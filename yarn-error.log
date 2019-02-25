@@ -1,14 +1,14 @@
 Arguments: 
-  /home/bjarne/.nvm/versions/node/v8.9.4/bin/node /home/bjarne/.nvm/versions/node/v8.9.4/lib/node_modules/yarn/bin/yarn.js run start-js
+  /home/bjarne/.nvm/versions/node/v8.9.4/lib/node_modules/node/bin/node /home/bjarne/.nvm/versions/node/v8.9.4/bin/yarn
 
 PATH: 
-  /home/bjarne/Development/react-weater/node_modules/.bin:/home/bjarne/.config/yarn/link/node_modules/.bin:/home/bjarne/Development/react-weater/node_modules/.bin:/home/bjarne/.config/yarn/link/node_modules/.bin:/home/bjarne/.yarn/bin:/home/bjarne/.nvm/versions/node/v8.9.4/libexec/lib/node_modules/npm/bin/node-gyp-bin:/home/bjarne/.nvm/versions/node/v8.9.4/lib/node_modules/npm/bin/node-gyp-bin:/home/bjarne/.nvm/versions/node/v8.9.4/bin/node_modules/npm/bin/node-gyp-bin:/home/bjarne/.nvm/versions/node/v8.9.4/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+  /home/bjarne/.nvm/versions/node/v8.9.4/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
 
 Yarn version: 
   1.5.1
 
 Node version: 
-  8.9.4
+  11.7.0
 
 Platform: 
   linux x64
@@ -7686,17 +7686,11 @@ Lockfile:
       window-size "0.1.0"
 
 Trace: 
-  Error: Command failed.
-  Exit signal: SIGINT
-  Command: sh
-  Arguments: -c react-scripts start
-  Directory: /home/bjarne/Development/react-weater
-  Output:
-  
-      at ProcessTermError.MessageError (/home/bjarne/.nvm/versions/node/v8.9.4/lib/node_modules/yarn/lib/cli.js:186:110)
-      at new ProcessTermError (/home/bjarne/.nvm/versions/node/v8.9.4/lib/node_modules/yarn/lib/cli.js:226:113)
-      at ChildProcess.<anonymous> (/home/bjarne/.nvm/versions/node/v8.9.4/lib/node_modules/yarn/lib/cli.js:30281:17)
-      at emitTwo (events.js:126:13)
-      at ChildProcess.emit (events.js:214:7)
-      at maybeClose (internal/child_process.js:925:16)
-      at Process.ChildProcess._handle.onexit (internal/child_process.js:209:5)
+  Error: Found incompatible module
+      at new MessageError (/home/bjarne/.nvm/versions/node/v8.9.4/lib/node_modules/yarn/lib/cli.js:186:110)
+      at checkOne (/home/bjarne/.nvm/versions/node/v8.9.4/lib/node_modules/yarn/lib/cli.js:62444:11)
+      at Object.check (/home/bjarne/.nvm/versions/node/v8.9.4/lib/node_modules/yarn/lib/cli.js:62463:5)
+      at /home/bjarne/.nvm/versions/node/v8.9.4/lib/node_modules/yarn/lib/cli.js:22803:73
+      at Generator.next (<anonymous>)
+      at step (/home/bjarne/.nvm/versions/node/v8.9.4/lib/node_modules/yarn/lib/cli.js:98:30)
+      at /home/bjarne/.nvm/versions/node/v8.9.4/lib/node_modules/yarn/lib/cli.js:109:13
